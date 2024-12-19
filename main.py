@@ -8,7 +8,7 @@ def main():
         config = Path("config.txt")
         with open(config, "r") as f:
             s = f.read()
-
+        print(s)
         df = pd.DataFrame([s])
         df.to_csv("config.csv")
     except Exception as e:
