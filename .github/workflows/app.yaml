@@ -33,11 +33,10 @@ jobs:
       - name: Upload Release
         uses: ncipollo/release-action@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.OKEN }}
           artifacts: release/main.zip
           tag: "latest"
-          name: "latest release"
-          releaseName: "Release ${{ github.sha }}"
+          name: "Release ${{ github.sha }}"
           body: "Auto-generated release from main.py update"
           draft: false
           prerelease: false
