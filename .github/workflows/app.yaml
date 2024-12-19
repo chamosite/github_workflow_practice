@@ -28,7 +28,7 @@ jobs:
         run: |
           mkdir Release
           cp config.txt dist/
-          powershell Compress-Archive -Path dist/main.exe dist/config.txt -DestinationPath release/main.zip
+          powershell Compress-Archive -Path dist/main.exe, dist/config.txt -DestinationPath release/main.zip
 
       - name: Upload Release
         uses: ncipollo/release-action@v1
